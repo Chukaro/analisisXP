@@ -1,0 +1,3 @@
+c:\users\chukaro\documents\visual studio 2012\Projects\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
+F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
+F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
