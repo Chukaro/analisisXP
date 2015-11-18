@@ -15,7 +15,12 @@ namespace AnalisisXP
         public Form1()
         {
             InitializeComponent();
-            //dfer
+        }
+
+        private void crearNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroCliente registro = new RegistroCliente();
+            registro.ShowDialog();
         }
     }
 }

@@ -38,8 +38,13 @@
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gananciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paneImagen = new System.Windows.Forms.Panel();
+            this.picBoxMoto1 = new System.Windows.Forms.PictureBox();
+            this.tarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.paneImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMoto1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -54,7 +59,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 430F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 566);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1015, 717);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -63,10 +68,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.inicioToolStripMenuItem,
             this.clietneToolStripMenuItem,
-            this.informesToolStripMenuItem});
+            this.informesToolStripMenuItem,
+            this.tarifaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1015, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,6 +96,7 @@
             this.crearNuevoClienteToolStripMenuItem.Name = "crearNuevoClienteToolStripMenuItem";
             this.crearNuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.crearNuevoClienteToolStripMenuItem.Text = "Crear nuevo cliente";
+            this.crearNuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoClienteToolStripMenuItem_Click);
             // 
             // reservacionToolStripMenuItem
             // 
@@ -121,26 +128,55 @@
             // paneImagen
             // 
             this.paneImagen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.paneImagen.BackgroundImage = global::AnalisisXP.Properties.Resources.imagenFondo;
+            this.paneImagen.Controls.Add(this.picBoxMoto1);
             this.paneImagen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneImagen.Location = new System.Drawing.Point(3, 30);
             this.paneImagen.Name = "paneImagen";
-            this.paneImagen.Size = new System.Drawing.Size(778, 533);
+            this.paneImagen.Size = new System.Drawing.Size(1009, 684);
             this.paneImagen.TabIndex = 2;
+            // 
+            // picBoxMoto1
+            // 
+            this.picBoxMoto1.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxMoto1.ErrorImage = null;
+            this.picBoxMoto1.Location = new System.Drawing.Point(29, 49);
+            this.picBoxMoto1.Name = "picBoxMoto1";
+            this.picBoxMoto1.Size = new System.Drawing.Size(172, 50);
+            this.picBoxMoto1.TabIndex = 0;
+            this.picBoxMoto1.TabStop = false;
+            // 
+            // tarifaToolStripMenuItem
+            // 
+            this.tarifaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearTarifaToolStripMenuItem});
+            this.tarifaToolStripMenuItem.Name = "tarifaToolStripMenuItem";
+            this.tarifaToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
+            this.tarifaToolStripMenuItem.Text = "Tarifa";
+            // 
+            // crearTarifaToolStripMenuItem
+            // 
+            this.crearTarifaToolStripMenuItem.Name = "crearTarifaToolStripMenuItem";
+            this.crearTarifaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearTarifaToolStripMenuItem.Text = "Crear tarifa";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 566);
+            this.ClientSize = new System.Drawing.Size(1015, 717);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(800, 604);
-            this.MinimumSize = new System.Drawing.Size(800, 604);
+            this.MaximumSize = new System.Drawing.Size(1031, 756);
+            this.MinimumSize = new System.Drawing.Size(1031, 756);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.paneImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMoto1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,6 +193,9 @@
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
         private System.Windows.Forms.Panel paneImagen;
+        private System.Windows.Forms.PictureBox picBoxMoto1;
+        private System.Windows.Forms.ToolStripMenuItem tarifaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearTarifaToolStripMenuItem;
     }
 }
 

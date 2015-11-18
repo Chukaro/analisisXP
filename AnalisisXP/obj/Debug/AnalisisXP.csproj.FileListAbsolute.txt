@@ -1,3 +1,13 @@
 c:\users\chukaro\documents\visual studio 2012\Projects\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
 F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
 F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.pdb
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csprojResolveAssemblyReference.cache
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Form1.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Properties.Resources.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csproj.GenerateResource.Cache
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.exe
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.pdb
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroCliente.resources
