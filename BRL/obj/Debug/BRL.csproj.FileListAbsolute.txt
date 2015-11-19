@@ -1,0 +1,7 @@
+E:\GitHub\analisisXP\BRL\bin\Debug\BRL.dll
+E:\GitHub\analisisXP\BRL\bin\Debug\BRL.pdb
+E:\GitHub\analisisXP\BRL\bin\Debug\DAL.dll
+E:\GitHub\analisisXP\BRL\bin\Debug\DAL.pdb
+E:\GitHub\analisisXP\BRL\obj\Debug\BRL.csprojResolveAssemblyReference.cache
+E:\GitHub\analisisXP\BRL\obj\Debug\BRL.dll
+E:\GitHub\analisisXP\BRL\obj\Debug\BRL.pdb
