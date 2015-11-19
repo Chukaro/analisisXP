@@ -13,6 +13,11 @@ namespace DAL
         private TipoVehiculo tipoVehiculo;
         private Modelo modelo;
 
+        public Vehiculo()
+        {
+            tipoVehiculo = new TipoVehiculo();
+            modelo = new Modelo();
+        }
         public int IdVehiculo
         {
             get { return idVehiculo; }

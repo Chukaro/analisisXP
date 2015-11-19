@@ -90,6 +90,16 @@
   <ItemGroup>
     <None Include="Imagenes\imagenFondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BRL\BRL.csproj">
+      <Project>{37042881-dc4b-40ec-a0c8-1c8a5c488355}</Project>
+      <Name>BRL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{15d0ea50-e97a-4aa6-8fd2-69d854d31778}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

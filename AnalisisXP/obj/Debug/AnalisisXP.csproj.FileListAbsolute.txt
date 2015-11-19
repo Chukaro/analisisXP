@@ -11,3 +11,7 @@ E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csproj.GenerateResource.Cac
 E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.exe
 E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.pdb
 E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroCliente.resources
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.dll
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.dll
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.pdb
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.pdb
