@@ -15,6 +15,9 @@ namespace AnalisisXP
         public BuscarCliente()
         {
             InitializeComponent();
+
+            dgv_ListClient.DataSource = BRL.ClienteBRL.listaCliente();
+            dgv_ListClient.Columns[0].Visible = false;
         }
     }
 }
