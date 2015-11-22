@@ -87,5 +87,199 @@ namespace DAL
                 }
             }
         }
+
+        #region Busqueda
+
+        public static DataTable listaCliente()
+        {
+
+            DataTable clientlist = new DataTable();
+
+            // Proporciona la cadena de conexion a base de datos desde el archivo de configuracion
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            // Crear y abrir la conexión en un bloque using. 
+            // Esto asegura que todos los recursos serán cerrados 
+            // y dispuestos cuando el código sale 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el objeto Command.
+                SqlCommand command = new SqlCommand("[PA_BusqClient]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    SqlDataAdapter tableAdapter = new SqlDataAdapter(command);
+
+                    tableAdapter.Fill(clientlist);
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return clientlist;
+
+        }
+
+        public static DataTable listaClientNombre(String nombre)
+        {
+            DataTable clienteNombusqueda = new DataTable();
+
+            // Proporciona la cadena de conexion a base de datos desde el archivo de configuracion
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            // Crear y abrir la conexión en un bloque using. 
+            // Esto asegura que todos los recursos serán cerrados 
+            // y dispuestos cuando el código sale 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el objeto Command.
+                SqlCommand command = new SqlCommand("[PA_BusqClientNom]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("nombre", nombre);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    SqlDataAdapter tableAdapter = new SqlDataAdapter(command);
+
+                    tableAdapter.Fill(clienteNombusqueda);
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return clienteNombusqueda;
+        }
+
+        public static DataTable listaClienteApaterno(String paterno)
+        {
+            DataTable clientApaternobusqueda = new DataTable();
+
+            // Proporciona la cadena de conexion a base de datos desde el archivo de configuracion
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            // Crear y abrir la conexión en un bloque using. 
+            // Esto asegura que todos los recursos serán cerrados 
+            // y dispuestos cuando el código sale 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el objeto Command.
+                SqlCommand command = new SqlCommand("[PA_BusqClientApaterno]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("paterno", paterno);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    SqlDataAdapter tableAdapter = new SqlDataAdapter(command);
+
+                    tableAdapter.Fill(clientApaternobusqueda);
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return clientApaternobusqueda;
+        }
+
+        public static DataTable listClienteAmaterno(String materno)
+        {
+            DataTable clientAmaternobusqueda = new DataTable();
+
+            // Proporciona la cadena de conexion a base de datos desde el archivo de configuracion
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            // Crear y abrir la conexión en un bloque using. 
+            // Esto asegura que todos los recursos serán cerrados 
+            // y dispuestos cuando el código sale 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el objeto Command.
+                SqlCommand command = new SqlCommand("[PA_BusqClientAmaterno]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("materno", materno);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    SqlDataAdapter tableAdapter = new SqlDataAdapter(command);
+
+                    tableAdapter.Fill(clientAmaternobusqueda);
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return clientAmaternobusqueda;
+        }
+
+        public static DataTable listCliCedula(String cedula)
+        {
+            DataTable clientCedulabusqueda = new DataTable();
+
+            // Proporciona la cadena de conexion a base de datos desde el archivo de configuracion
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            // Crear y abrir la conexión en un bloque using. 
+            // Esto asegura que todos los recursos serán cerrados 
+            // y dispuestos cuando el código sale 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el objeto Command.
+                SqlCommand command = new SqlCommand("[PA_BusqClientCedula]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("cedula", cedula);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    SqlDataAdapter tableAdapter = new SqlDataAdapter(command);
+
+                    tableAdapter.Fill(clientCedulabusqueda);
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return clientCedulabusqueda;
+        }
+        #endregion
     }
 }

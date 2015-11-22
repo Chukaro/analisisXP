@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +19,7 @@ namespace DAL
         private int cedula;
         private List<Vehiculo> vehiculo;
 
+        #region Metodos
         public Cliente()
         {
             vehiculo = new List<Vehiculo>();
@@ -66,7 +70,9 @@ namespace DAL
         {
             return vehiculo;
         }
-        //dfgfgfdfg
+        #endregion
+
+       
 
     }
 }

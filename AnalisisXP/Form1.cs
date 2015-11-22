@@ -22,5 +22,11 @@ namespace AnalisisXP
             RegistroCliente registro = new RegistroCliente();
             registro.ShowDialog();
         }
+
+        private void búsquedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarCliente busqClient = new BuscarCliente();
+            busqClient.Show();
+        }
     }
 }
