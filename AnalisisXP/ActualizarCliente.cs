@@ -40,6 +40,7 @@ namespace AnalisisXP
         private void btn_CancelarACtCLient_Click(object sender, EventArgs e)
         {
             this.Close();
+            //hhgrtf
         }
 
         private void btn_ActClient_Click(object sender, EventArgs e)
