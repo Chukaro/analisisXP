@@ -12,9 +12,11 @@ namespace AnalisisXP
 {
     public partial class Form1 : Form
     {
+        private BuscarCliente buscar;
         public Form1()
         {
             InitializeComponent();
+            buscar = new BuscarCliente();
         }
 
         private void crearNuevoClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -25,8 +27,8 @@ namespace AnalisisXP
 
         private void búsquedaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BuscarCliente busqClient = new BuscarCliente();
-            busqClient.Show();
+            paneImagen.Controls.Clear();
+            paneImagen.Controls.Add(buscar);
         }
     }
 }

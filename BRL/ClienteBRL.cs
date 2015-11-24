@@ -9,6 +9,7 @@ namespace BRL
 {
     public class ClienteBRL
     {
+        #region ComboBox
         public static List<DAL.Modelo> ComBoxModelo()
         {
             return DAL.Referencias.comBoxModelo();
@@ -18,11 +19,14 @@ namespace BRL
         {
             return DAL.Referencias.comBoxTipoVehiculo();
         }
+        #endregion
 
+        #region Inseratr
         public static void GuardarCliente(DAL.Cliente cliente)
         {
             DAL.ClienteList.guardarCliente(cliente);
         }
+        #endregion
 
         #region Busqueda
 
@@ -52,6 +56,21 @@ namespace BRL
         }
 
         #endregion
+
+        #region Eliminar
+        public static void elimClient(int idClient)
+        {
+            DAL.Cliente.elimClient(idClient);
+        }
+        #endregion
+
+        #region Actualizar
+        public static void actClient(int idCliente, String nombre, String paterno, String materno, String cedula, String telefono)
+        {
+            DAL.Cliente.actualizClient(idCliente, nombre, paterno, materno, cedula, telefono);
+        }
+        #endregion
+
 
     }
 }

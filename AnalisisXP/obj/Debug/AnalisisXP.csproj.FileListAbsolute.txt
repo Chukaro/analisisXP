@@ -31,3 +31,4 @@ C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Form1.r
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Properties.Resources.resources
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroCliente.resources
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csproj.GenerateResource.Cache
+C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.ActualizarCliente.resources
