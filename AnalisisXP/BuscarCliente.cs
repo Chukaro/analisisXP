@@ -15,11 +15,15 @@ namespace AnalisisXP
 
     {
         Cliente cli = new Cliente();
-        private int idVehiculo;
+        Vehiculo vei = new Vehiculo();
+        TipoVehiculo tipo = new TipoVehiculo();
+        Modelo modelo = new Modelo();
+        private int idVehiculo, j;
         
         public BuscarCliente()
         {
             InitializeComponent();
+            DatosComoboBox();
             this.Dock = DockStyle.Fill;
             dgv_ListClient.DataSource = BRL.ClienteBRL.listaCliente();
             dgv_ListClient.Columns[0].Visible = false;
@@ -29,41 +33,54 @@ namespace AnalisisXP
         {
             int opcion = Convert.ToInt32(cbx_TipoClient.SelectedIndex);
 
+            if (txb_DetBusqClient.Text == " ")
+            {
+                dgv_ListClient.DataSource = BRL.ClienteBRL.listaCliente();
+            }
+
             switch(opcion)
             {
                 case 0:
                     dgv_ListClient.DataSource = BRL.ClienteBRL.listaClientNombre(txb_DetBusqClient.Text);
                     dgv_ListClient.Columns[0].Visible = false;
+
+                    dgv_ListAutos.Rows.Clear();
+                    cargaAutos(cli.IdCliente);
                     break;
 
                 case 1:
                     dgv_ListClient.DataSource = BRL.ClienteBRL.listaClienteApaterno(txb_DetBusqClient.Text);
                     dgv_ListClient.Columns[0].Visible = false;
+
+                    dgv_ListAutos.Rows.Clear();
+                    cargaAutos(cli.IdCliente);
                     break;
 
                 case 2:
                     dgv_ListClient.DataSource = BRL.ClienteBRL.listClienteAmaterno(txb_DetBusqClient.Text);
                     dgv_ListClient.Columns[0].Visible = false;
+
+                    dgv_ListAutos.Rows.Clear();
+                    cargaAutos(cli.IdCliente);
                     break;
 
                 case 3:
                     dgv_ListClient.DataSource = BRL.ClienteBRL.listCliCedula(txb_DetBusqClient.Text);
                     dgv_ListClient.Columns[0].Visible = false;
+
+                    dgv_ListAutos.Rows.Clear();
+                    cargaAutos(cli.IdCliente);
                     break;  
             }
         }
 
         private void dgv_ListClient_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            cli.IdCliente = Convert.ToInt32(dgv_ListClient.CurrentRow.Cells[0].Value.ToString());
-            dgv_ListAutos.DataSource = BRL.VehiculoBRL.listVehic(cli.IdCliente);
-            dgv_ListAutos.Columns[0].Visible = false;
-        }
+            dgv_ListAutos.Rows.Clear();
 
-        private void dgv_ListAutos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //idVehiculo = Convert.ToInt32(dgv_ListAutos.CurrentRow.Cells[0].Value.ToString());
-            
+            cli.IdCliente = Convert.ToInt32(dgv_ListClient.CurrentRow.Cells[0].Value.ToString());
+            cargaAutos(cli.IdCliente);
+
         }
 
         private void btn_ClientElim_Click(object sender, EventArgs e)
@@ -75,6 +92,18 @@ namespace AnalisisXP
                 BRL.ClienteBRL.elimClient(cli.IdCliente);
                 dgv_ListClient.DataSource = BRL.ClienteBRL.listaCliente();
                 dgv_ListClient.Columns[0].Visible = false;
+
+                foreach (DataGridViewRow tabla in dgv_ListAutos.Rows)
+                {
+                    if (tabla.Cells[0].Value != null)
+                    {
+                        j = Convert.ToInt32(tabla.Cells[0].Value.ToString());
+                        BRL.VehiculoBRL.elimVehic(j);
+                    }
+                }
+                dgv_ListAutos.Rows.Clear();
+                cargaAutos(cli.IdCliente);
+
             }
         }
 
@@ -107,5 +136,56 @@ namespace AnalisisXP
             dgv_ListClient.DataSource = BRL.ClienteBRL.listaCliente();
             dgv_ListClient.Columns[0].Visible = false;
         }
+
+        private void DatosComoboBox()
+        {
+            DataGridViewComboBoxColumn comboboxModelo = dgv_ListAutos.Columns["Modelo"] as DataGridViewComboBoxColumn;
+            comboboxModelo.DataSource = BRL.ClienteBRL.ComBoxModelo();
+            comboboxModelo.DisplayMember = "Nombre";
+            comboboxModelo.ValueMember = "IdModelo";
+
+            DataGridViewComboBoxColumn comboboxTipo = dgv_ListAutos.Columns["Tipo"] as DataGridViewComboBoxColumn;
+            comboboxTipo.DataSource = BRL.ClienteBRL.ComBoxTipoVehiculo();
+            comboboxTipo.DisplayMember = "Nombre";
+            comboboxTipo.ValueMember = "IdTipoVehiculo";
+            //comboboxModelo.Value = comboboxModelo.Items[0];
+        }
+
+        private void cargaAutos(int idCliente)
+        {
+            List<DAL.Vehiculo> autos = BRL.VehiculoBRL.listVehic(cli.IdCliente);
+            foreach (var item in autos)
+            {
+                dgv_ListAutos.Rows.Add(item.IdVehiculo, item.Placa, item.TipoVehiculo.IdTipoVehiculo, item.Modelo.IdModelo);
+            }
+        }
+
+        private void btn_VehicAct_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow tabla in dgv_ListAutos.Rows)
+            {
+                if (tabla.Cells[0].Value != null)
+                {
+                    vei.IdVehiculo = Convert.ToInt32(tabla.Cells[0].Value.ToString());
+                    vei.Placa = tabla.Cells[1].Value.ToString();
+                    modelo.IdModelo = Convert.ToInt32(tabla.Cells[3].Value.ToString());
+                    vei.Modelo = modelo;
+                    tipo.IdTipoVehiculo = Convert.ToInt32(tabla.Cells[2].Value.ToString());
+                    vei.TipoVehiculo = tipo;
+
+                    BRL.VehiculoBRL.actualVehi(vei);
+
+                }
+            }
+            dgv_ListAutos.Rows.Clear();
+            cargaAutos(cli.IdCliente);
+        }
+
+        private void btn_AgregarVehiculo_Click(object sender, EventArgs e)
+        {
+            Agregar_Vehiculo agregarVehi = new Agregar_Vehiculo(cli.IdCliente);
+            agregarVehi.ShowDialog();
+        }
+
     }
 }

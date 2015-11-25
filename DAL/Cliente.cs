@@ -17,6 +17,9 @@ namespace DAL
         private string paterno;
         private string materno;
         private int cedula;
+        private int eliminar;
+
+        
         private List<Vehiculo> vehiculo;
 
         #region Metodos
@@ -69,6 +72,12 @@ namespace DAL
         public List<Vehiculo> getVehiculo()
         {
             return vehiculo;
+        }
+
+        public int Eliminar
+        {
+            get { return eliminar; }
+            set { eliminar = value; }
         }
         #endregion
 

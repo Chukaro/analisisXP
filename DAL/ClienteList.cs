@@ -26,6 +26,8 @@ namespace DAL
                 command.Parameters.AddWithValue("materno", cliente.Materno);
                 command.Parameters.AddWithValue("cedula", cliente.Cedula);
                 command.Parameters.AddWithValue("telefono", cliente.Telefono);
+                command.Parameters.AddWithValue("eliminado", cliente.Eliminar);
+
 
 
                 command.Parameters.AddWithValue("idCliente", 0);

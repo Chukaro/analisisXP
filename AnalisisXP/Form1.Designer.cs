@@ -34,18 +34,15 @@
             this.clietneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gananciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paneImagen = new System.Windows.Forms.Panel();
-            this.picBoxMoto1 = new System.Windows.Forms.PictureBox();
-            this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.paneImagen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxMoto1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -106,6 +103,13 @@
             this.reservacionToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reservacionToolStripMenuItem.Text = "Reservacion";
             // 
+            // búsquedaToolStripMenuItem
+            // 
+            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
+            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.búsquedaToolStripMenuItem.Text = "Búsqueda";
+            this.búsquedaToolStripMenuItem.Click += new System.EventHandler(this.búsquedaToolStripMenuItem_Click);
+            // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -138,36 +142,18 @@
             // crearTarifaToolStripMenuItem
             // 
             this.crearTarifaToolStripMenuItem.Name = "crearTarifaToolStripMenuItem";
-            this.crearTarifaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.crearTarifaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearTarifaToolStripMenuItem.Text = "Crear tarifa";
             // 
             // paneImagen
             // 
-            this.paneImagen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.paneImagen.BackgroundImage = global::AnalisisXP.Properties.Resources.imagenFondo;
-            this.paneImagen.Controls.Add(this.picBoxMoto1);
+            this.paneImagen.BackColor = System.Drawing.Color.Transparent;
+            this.paneImagen.BackgroundImage = global::AnalisisXP.Properties.Resources.PARQUEO;
             this.paneImagen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneImagen.Location = new System.Drawing.Point(3, 30);
             this.paneImagen.Name = "paneImagen";
             this.paneImagen.Size = new System.Drawing.Size(1009, 684);
             this.paneImagen.TabIndex = 2;
-            // 
-            // picBoxMoto1
-            // 
-            this.picBoxMoto1.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxMoto1.ErrorImage = null;
-            this.picBoxMoto1.Location = new System.Drawing.Point(29, 49);
-            this.picBoxMoto1.Name = "picBoxMoto1";
-            this.picBoxMoto1.Size = new System.Drawing.Size(172, 50);
-            this.picBoxMoto1.TabIndex = 0;
-            this.picBoxMoto1.TabStop = false;
-            // 
-            // búsquedaToolStripMenuItem
-            // 
-            this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
-            this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.búsquedaToolStripMenuItem.Text = "Búsqueda";
-            this.búsquedaToolStripMenuItem.Click += new System.EventHandler(this.búsquedaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -184,8 +170,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.paneImagen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxMoto1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,7 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
         private System.Windows.Forms.Panel paneImagen;
-        private System.Windows.Forms.PictureBox picBoxMoto1;
         private System.Windows.Forms.ToolStripMenuItem tarifaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearTarifaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem búsquedaToolStripMenuItem;

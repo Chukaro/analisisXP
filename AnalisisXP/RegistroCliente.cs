@@ -46,6 +46,7 @@ namespace AnalisisXP
                     ingreso.Materno = txtMaterno.Text;
                     ingreso.Cedula = Convert.ToInt32(txtCedula.Text);
                     ingreso.Telefono = Convert.ToInt32(txtTelefono.Text);
+                    ingreso.Eliminar = 0;
 
                     if (dgvAutos.Rows.Count > 0)
                     {

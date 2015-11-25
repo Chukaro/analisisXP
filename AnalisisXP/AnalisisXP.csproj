@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar Vehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar Vehiculo.Designer.cs">
+      <DependentUpon>Agregar Vehiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActualizarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="RegistroCliente.Designer.cs">
       <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agregar Vehiculo.resx">
+      <DependentUpon>Agregar Vehiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActualizarCliente.resx">
       <DependentUpon>ActualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +126,9 @@
       <Project>{15d0ea50-e97a-4aa6-8fd2-69d854d31778}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PARQUEO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
