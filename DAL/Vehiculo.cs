@@ -205,7 +205,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@tipo", vei.tipoVehiculo.IdTipoVehiculo);
                 // Abre la conexión en un bloque try / catch. 
                 // Crear y ejecutar el DataReader, escribiendo 
-                // el conjunto de resultados a la ventana de la consola.
+                // el conjunto de resultados a la ventana de la consola.sefasdf
                 try
                 {
                     connection.Open();
