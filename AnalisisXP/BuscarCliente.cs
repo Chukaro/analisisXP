@@ -148,7 +148,7 @@ namespace AnalisisXP
             comboboxTipo.DataSource = BRL.ClienteBRL.ComBoxTipoVehiculo();
             comboboxTipo.DisplayMember = "Nombre";
             comboboxTipo.ValueMember = "IdTipoVehiculo";
-            //comboboxModelo.Value = comboboxModelo.Items[0];
+            //comboboxModelo.Value = comboboxModelo.Items[0];asdfasfasdfas
         }
 
         private void cargaAutos(int idCliente)
