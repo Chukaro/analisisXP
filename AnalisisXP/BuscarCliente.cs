@@ -114,6 +114,7 @@ namespace AnalisisXP
             DialogResult resultado = MessageBox.Show("¿Desea eliminar al Vehiculo: " + dgv_ListAutos.CurrentRow.Cells[1].Value.ToString() + " " + dgv_ListAutos.CurrentRow.Cells[2].Value.ToString() + "?", "Eliminar Vehiculo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (resultado == System.Windows.Forms.DialogResult.OK)
             {
+                dgv_ListAutos.Rows.Clear();
                 BRL.VehiculoBRL.elimVehic(idVehiculo);
                 dgv_ListAutos.DataSource = BRL.VehiculoBRL.listVehic(cli.IdCliente);
                 dgv_ListAutos.Columns[0].Visible = false;

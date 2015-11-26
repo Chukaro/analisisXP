@@ -40,8 +40,8 @@
             this.txb_TelfClient = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_ActClient = new System.Windows.Forms.Button();
             this.btn_CancelarACtCLient = new System.Windows.Forms.Button();
+            this.btn_ActClient = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -168,18 +168,6 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // btn_ActClient
-            // 
-            this.btn_ActClient.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_ActClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_ActClient.Location = new System.Drawing.Point(8, 19);
-            this.btn_ActClient.Name = "btn_ActClient";
-            this.btn_ActClient.Size = new System.Drawing.Size(126, 36);
-            this.btn_ActClient.TabIndex = 0;
-            this.btn_ActClient.Text = "Actualizar";
-            this.btn_ActClient.UseVisualStyleBackColor = false;
-            this.btn_ActClient.Click += new System.EventHandler(this.btn_ActClient_Click);
-            // 
             // btn_CancelarACtCLient
             // 
             this.btn_CancelarACtCLient.BackColor = System.Drawing.Color.Tomato;
@@ -192,6 +180,18 @@
             this.btn_CancelarACtCLient.UseVisualStyleBackColor = false;
             this.btn_CancelarACtCLient.Click += new System.EventHandler(this.btn_CancelarACtCLient_Click);
             // 
+            // btn_ActClient
+            // 
+            this.btn_ActClient.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_ActClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_ActClient.Location = new System.Drawing.Point(8, 19);
+            this.btn_ActClient.Name = "btn_ActClient";
+            this.btn_ActClient.Size = new System.Drawing.Size(126, 36);
+            this.btn_ActClient.TabIndex = 0;
+            this.btn_ActClient.Text = "Actualizar";
+            this.btn_ActClient.UseVisualStyleBackColor = false;
+            this.btn_ActClient.Click += new System.EventHandler(this.btn_ActClient_Click);
+            // 
             // ActualizarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,8 +201,12 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(392, 403);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(392, 403);
             this.Name = "ActualizarCliente";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Actualizar Cliente";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -228,7 +228,7 @@ namespace DAL
         {
             string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
 
-            string consulta2 = "INSERT INTO dbo.Vehiculo (Placa, Cliente_IdCliente, Modelo_IdModelo, TipoVehiculo_IdTipo) VALUES (@placa, @idCli, @modelo, @tipo) ";
+            string consulta2 = "INSERT INTO dbo.Vehiculo (Placa, Cliente_IdCliente, Modelo_IdModelo, TipoVehiculo_IdTipo, Eliminar) VALUES (@placa, @idCli, @modelo, @tipo, 0) ";
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -71,6 +71,16 @@ namespace BRL
         }
         #endregion
 
+        #region tarifa
+        public static void NuevaTarifa(List<DAL.Tarifa> nueva)
+        {
+            DAL.Tarifa.nuevaTarifa(nueva);
+        }
 
+        public static List<DAL.Tarifa> BuscarTarifa(DateTime inico, DateTime fin)
+        {
+            return DAL.Tarifa.buscarTarifa(inico, fin);
+        }
+        #endregion
     }
 }

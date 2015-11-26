@@ -1,9 +1,8 @@
-E:\GitHub\analisisXP\DAL\bin\Debug\DAL.dll
-E:\GitHub\analisisXP\DAL\bin\Debug\DAL.pdb
-E:\GitHub\analisisXP\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-E:\GitHub\analisisXP\DAL\obj\Debug\DAL.dll
-E:\GitHub\analisisXP\DAL\obj\Debug\DAL.pdb
 C:\Users\Enrique\Source\Repos\analisisXP\DAL\bin\Debug\DAL.dll
 C:\Users\Enrique\Source\Repos\analisisXP\DAL\bin\Debug\DAL.pdb
 C:\Users\Enrique\Source\Repos\analisisXP\DAL\obj\Debug\DAL.dll
 C:\Users\Enrique\Source\Repos\analisisXP\DAL\obj\Debug\DAL.pdb
+E:\GitHub\analisisXP\DAL\bin\Debug\DAL.dll
+E:\GitHub\analisisXP\DAL\bin\Debug\DAL.pdb
+E:\GitHub\analisisXP\DAL\obj\Debug\DAL.dll
+E:\GitHub\analisisXP\DAL\obj\Debug\DAL.pdb

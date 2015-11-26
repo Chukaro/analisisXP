@@ -38,5 +38,40 @@ namespace DAL
 
             return dev;
         }
+
+        public static void NumerosDecimales(KeyPressEventArgs pE, object sender)
+        {
+            if (Char.IsDigit(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsControl(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsPunctuation(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else
+            {
+                pE.Handled = true;
+            }
+
+            if ((pE.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                pE.Handled = true;
+            }
+
+            if ((pE.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                pE.Handled = true;
+            }
+
+            if (pE.KeyChar == '-')
+            {
+                pE.Handled = true;
+            }
+        }
     }
 }

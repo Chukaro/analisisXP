@@ -163,6 +163,7 @@
             // 
             // dgv_ListClient
             // 
+            this.dgv_ListClient.AllowUserToAddRows = false;
             this.dgv_ListClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ListClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ListClient.Location = new System.Drawing.Point(3, 18);
@@ -187,6 +188,7 @@
             // 
             // dgv_ListAutos
             // 
+            this.dgv_ListAutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ListAutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ListAutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdAuto,
@@ -220,7 +222,6 @@
             // 
             this.Modelo.HeaderText = "Modelo";
             this.Modelo.Name = "Modelo";
-            this.Modelo.Width = 170;
             // 
             // tableLayoutPanel2
             // 

@@ -1,20 +1,6 @@
 c:\users\chukaro\documents\visual studio 2012\Projects\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
 F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
 F:\PROYECTOS GITHUB\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.pdb
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csprojResolveAssemblyReference.cache
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Form1.resources
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Properties.Resources.resources
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csproj.GenerateResource.Cache
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.exe
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.pdb
-E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroCliente.resources
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.dll
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.dll
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.pdb
-E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.pdb
 C:\Users\Enrique\Source\Repos\analisisXP2\AnalisisXP\bin\Debug\AnalisisXP.exe.config
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Agregar_Vehiculo.resources
@@ -33,3 +19,23 @@ C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\bin\Debug\DAL.pdb
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csprojResolveAssemblyReference.cache
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.exe
 C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.pdb
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe.config
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.exe
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\AnalisisXP.pdb
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.dll
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.dll
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\BRL.pdb
+E:\GitHub\analisisXP\AnalisisXP\bin\Debug\DAL.pdb
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csprojResolveAssemblyReference.cache
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Agregar_Vehiculo.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.ActualizarCliente.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.BuscarCliente.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.BuscarTarifa.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Form1.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.NuevaTarifa.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Properties.Resources.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroCliente.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroEstacionamiento.resources
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.csproj.GenerateResource.Cache
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.exe
+E:\GitHub\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.pdb
