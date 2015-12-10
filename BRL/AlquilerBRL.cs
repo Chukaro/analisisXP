@@ -18,5 +18,10 @@ namespace BRL
         {
             DAL.Alquiler.actualizarAlquilerCompleto(fechaFin, horaFin);
         }
+
+        public static Alquiler busquedaporPlaca(String placa)
+        {
+            return DAL.Alquiler.buscarPorPlaca(placa);
+        }
     }
 }

@@ -68,6 +68,12 @@
     <Compile Include="BuscarTarifa.Designer.cs">
       <DependentUpon>BuscarTarifa.cs</DependentUpon>
     </Compile>
+    <Compile Include="CuentaAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentaAlquiler.Designer.cs">
+      <DependentUpon>CuentaAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarTarifa.resx">
       <DependentUpon>BuscarTarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentaAlquiler.resx">
+      <DependentUpon>CuentaAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

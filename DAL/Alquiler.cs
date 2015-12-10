@@ -12,7 +12,18 @@ namespace DAL
 {
     public class Alquiler
     {
+        private int Id;
+        private Double precio;
+
+
         private String fechaInicio;
+        private TimeSpan hora_Inic;
+
+        public TimeSpan Hora_Inic
+        {
+            get { return hora_Inic; }
+            set { hora_Inic = value; }
+        }
         private DateTime fechaFin;
         private String horaInicio;
         private String horaFin;
@@ -21,6 +32,17 @@ namespace DAL
         private String observacion;
         private int tarifa_IdTarifa;
 
+        public int Id1
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+
+        public Double Precio
+        {
+            get { return precio; }
+            set { precio = value; }
+        }
 
         public String FechaInicio
         {
@@ -142,6 +164,52 @@ namespace DAL
                     throw ex;
                 }
             }
+        }
+
+        public static Alquiler buscarPorPlaca(String placa)
+        {
+            Alquiler alq = new Alquiler();
+
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("PA_cuentaVehiculo", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.AddWithValue("@placa", placa);
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            alq.Id1 = reader.GetInt32(0);
+                            alq.Placa = reader.GetString(1);
+                            alq.Hora_Inic = reader.GetTimeSpan(2);
+                            alq.Posicion = reader.GetString(3);
+                            alq.Precio = reader.GetDouble(4);
+                        }
+                        reader.NextResult();
+                    }
+
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+            return alq;
         }
     }
 }

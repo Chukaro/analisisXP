@@ -16,9 +16,9 @@ namespace AnalisisXP
         private Alquiler alq = new Alquiler();
         private DateTime x = DateTime.Now;
         DateTime thisDay = DateTime.Today;
-        private String posicion;
+        private int posicion;
 
-        public RegistroEstacionamiento(String pos)
+        public RegistroEstacionamiento(int pos)
         {
             InitializeComponent();
             posicion = pos;
@@ -30,14 +30,16 @@ namespace AnalisisXP
             alq.FechaInicio = String.Format("{0:dd/MM/yy HH:mm:ss}", thisDay);
             alq.HoraInicio = "" + x.Hour + ":" + x.Minute + ":" + x.Second;
             alq.Placa = txb_Placa.Text;
-            alq.Posicion = posicion;
+            alq.Posicion = ""+posicion;
             alq.Observacion = txb_Oservacion.Text;
             alq.Tarifa_IdTarifa = 1;
-
+            Form1.getPlaca(txb_Placa.Text, posicion);
             BRL.AlquilerBRL.insertarAlquiler(alq);
+            DialogResult resultado = MessageBox.Show("Registro realizado satisfactoriamente", "Registro Alquiler", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
-        private void btnCancelar_MouseClick(object sender, MouseEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

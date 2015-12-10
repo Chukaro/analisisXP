@@ -1,4 +1,5 @@
 ﻿using AnalisisXP.Properties;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace AnalisisXP
         private BuscarCliente buscar;
         private BuscarTarifa buscarTarifa;
         private int[] contadores = new int[11];
+        private static String[] placas = new String[11];
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +53,7 @@ namespace AnalisisXP
         {
             if (contadores[i] == 0)
             {
-                RegistroEstacionamiento registroEstacionamiento = new RegistroEstacionamiento("" + i);
+                RegistroEstacionamiento registroEstacionamiento = new RegistroEstacionamiento(i);
                 registroEstacionamiento.ShowDialog();
                 //pbNumero01.ImageLocation = @"\Imagenes\prueba.png";
                 posicion.Image = Resources.prueba;
@@ -62,6 +64,7 @@ namespace AnalisisXP
                 DialogResult resultado = MessageBox.Show("¿Desea liberar el espacio?", "Espacio disponible", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (resultado == DialogResult.Yes)
                 {
+                    mostrarCuenta(i);
                     posicion.Image = null;
                     contadores[i] = 0;
                 }
@@ -121,6 +124,19 @@ namespace AnalisisXP
         private void pos_11_Click(object sender, EventArgs e)
         {
             llenarRegistro(pos_11, 10);
+        }
+
+        public static void mostrarCuenta(int pos)
+        {
+            Alquiler alq = new Alquiler();
+            alq = BRL.AlquilerBRL.busquedaporPlaca(placas[pos]);
+            CuentaAlquiler cuenta = new CuentaAlquiler(alq);
+            cuenta.ShowDialog();
+        }
+
+        public static void getPlaca(String plac, int pos)
+        {
+            placas[pos] = plac;
         }
     }
 }

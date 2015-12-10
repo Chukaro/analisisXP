@@ -31,8 +31,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtp_HoraInicio = new System.Windows.Forms.DateTimePicker();
-            this.txb_Oservacion = new System.Windows.Forms.TextBox();
             this.txb_Placa = new System.Windows.Forms.TextBox();
+            this.txb_Oservacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,8 +61,8 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dtp_HoraInicio);
-            this.panel1.Controls.Add(this.txb_Oservacion);
             this.panel1.Controls.Add(this.txb_Placa);
+            this.panel1.Controls.Add(this.txb_Oservacion);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -81,21 +81,22 @@
             this.dtp_HoraInicio.Size = new System.Drawing.Size(107, 20);
             this.dtp_HoraInicio.TabIndex = 3;
             // 
-            // txb_Oservacion
-            // 
-            this.txb_Oservacion.Location = new System.Drawing.Point(121, 154);
-            this.txb_Oservacion.Multiline = true;
-            this.txb_Oservacion.Name = "txb_Oservacion";
-            this.txb_Oservacion.Size = new System.Drawing.Size(184, 71);
-            this.txb_Oservacion.TabIndex = 2;
-            // 
             // txb_Placa
             // 
             this.txb_Placa.Location = new System.Drawing.Point(121, 89);
-            this.txb_Placa.MaxLength = 10;
+            this.txb_Placa.MaxLength = 8;
             this.txb_Placa.Name = "txb_Placa";
             this.txb_Placa.Size = new System.Drawing.Size(107, 20);
             this.txb_Placa.TabIndex = 2;
+            // 
+            // txb_Oservacion
+            // 
+            this.txb_Oservacion.Location = new System.Drawing.Point(121, 159);
+            this.txb_Oservacion.MaxLength = 140;
+            this.txb_Oservacion.Multiline = true;
+            this.txb_Oservacion.Name = "txb_Oservacion";
+            this.txb_Oservacion.Size = new System.Drawing.Size(197, 57);
+            this.txb_Oservacion.TabIndex = 2;
             // 
             // label5
             // 
@@ -151,7 +152,7 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseClick);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -190,8 +191,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.DateTimePicker dtp_HoraInicio;
-        private System.Windows.Forms.TextBox txb_Oservacion;
         private System.Windows.Forms.TextBox txb_Placa;
+        private System.Windows.Forms.TextBox txb_Oservacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
