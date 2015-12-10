@@ -60,3 +60,7 @@ C:\Users\VAIO\Desktop\analisisXP\AnalisisXP\bin\Debug\BRL.dll
 C:\Users\VAIO\Desktop\analisisXP\AnalisisXP\bin\Debug\DAL.dll
 C:\Users\VAIO\Desktop\analisisXP\AnalisisXP\bin\Debug\BRL.pdb
 C:\Users\VAIO\Desktop\analisisXP\AnalisisXP\bin\Debug\DAL.pdb
+C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.BuscarTarifa.resources
+C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.NuevaTarifa.resources
+C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.RegistroEstacionamiento.resources
+C:\Users\Enrique\Source\Repos\analisisXP\AnalisisXP\obj\Debug\AnalisisXP.Reservacion.resources

@@ -33,6 +33,7 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clietneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,18 +41,32 @@
             this.tarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifiarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbNumero02 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbNumero01 = new System.Windows.Forms.PictureBox();
+            this.pos_11 = new System.Windows.Forms.PictureBox();
+            this.pos_10 = new System.Windows.Forms.PictureBox();
+            this.pos_09 = new System.Windows.Forms.PictureBox();
+            this.pos_08 = new System.Windows.Forms.PictureBox();
+            this.pos_07 = new System.Windows.Forms.PictureBox();
+            this.pos_02 = new System.Windows.Forms.PictureBox();
+            this.pos_01 = new System.Windows.Forms.PictureBox();
+            this.pos_03 = new System.Windows.Forms.PictureBox();
+            this.pos_04 = new System.Windows.Forms.PictureBox();
+            this.pos_05 = new System.Windows.Forms.PictureBox();
+            this.pos_06 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pbNumero02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_09)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_08)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_07)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_06)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -76,8 +91,7 @@
             this.inicioToolStripMenuItem,
             this.clietneToolStripMenuItem,
             this.informesToolStripMenuItem,
-            this.tarifaToolStripMenuItem,
-            this.reservacionToolStripMenuItem});
+            this.tarifaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(918, 25);
@@ -94,6 +108,7 @@
             // 
             this.clietneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearNuevoClienteToolStripMenuItem,
+            this.reservacionToolStripMenuItem,
             this.búsquedaToolStripMenuItem});
             this.clietneToolStripMenuItem.Name = "clietneToolStripMenuItem";
             this.clietneToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
@@ -105,6 +120,12 @@
             this.crearNuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.crearNuevoClienteToolStripMenuItem.Text = "Crear nuevo cliente";
             this.crearNuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoClienteToolStripMenuItem_Click);
+            // 
+            // reservacionToolStripMenuItem
+            // 
+            this.reservacionToolStripMenuItem.Name = "reservacionToolStripMenuItem";
+            this.reservacionToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reservacionToolStripMenuItem.Text = "Reservacion";
             // 
             // búsquedaToolStripMenuItem
             // 
@@ -125,13 +146,13 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // gananciaToolStripMenuItem
             // 
             this.gananciaToolStripMenuItem.Name = "gananciaToolStripMenuItem";
-            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gananciaToolStripMenuItem.Text = "Ganancia";
             // 
             // tarifaToolStripMenuItem
@@ -157,64 +178,125 @@
             this.buscarTarifaToolStripMenuItem.Text = "Buscar tarifa";
             this.buscarTarifaToolStripMenuItem.Click += new System.EventHandler(this.buscarTarifaToolStripMenuItem_Click);
             // 
-            // reservacionToolStripMenuItem
-            // 
-            this.reservacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearReservaToolStripMenuItem,
-            this.modifiarReservaToolStripMenuItem,
-            this.buscarToolStripMenuItem});
-            this.reservacionToolStripMenuItem.Name = "reservacionToolStripMenuItem";
-            this.reservacionToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
-            this.reservacionToolStripMenuItem.Text = "Reservacion";
-            // 
-            // crearReservaToolStripMenuItem
-            // 
-            this.crearReservaToolStripMenuItem.Name = "crearReservaToolStripMenuItem";
-            this.crearReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.crearReservaToolStripMenuItem.Text = "Crear reserva";
-            this.crearReservaToolStripMenuItem.Click += new System.EventHandler(this.crearReservaToolStripMenuItem_Click);
-            // 
-            // modifiarReservaToolStripMenuItem
-            // 
-            this.modifiarReservaToolStripMenuItem.Name = "modifiarReservaToolStripMenuItem";
-            this.modifiarReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.modifiarReservaToolStripMenuItem.Text = "Modifiar reserva";
-            // 
-            // buscarToolStripMenuItem
-            // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
-            // 
             // pbNumero02
             // 
             this.pbNumero02.BackColor = System.Drawing.Color.Transparent;
             this.pbNumero02.BackgroundImage = global::AnalisisXP.Properties.Resources.PARQUEO;
-            this.pbNumero02.Controls.Add(this.pictureBox1);
-            this.pbNumero02.Controls.Add(this.pbNumero01);
+            this.pbNumero02.Controls.Add(this.pos_11);
+            this.pbNumero02.Controls.Add(this.pos_10);
+            this.pbNumero02.Controls.Add(this.pos_09);
+            this.pbNumero02.Controls.Add(this.pos_08);
+            this.pbNumero02.Controls.Add(this.pos_07);
+            this.pbNumero02.Controls.Add(this.pos_02);
+            this.pbNumero02.Controls.Add(this.pos_01);
+            this.pbNumero02.Controls.Add(this.pos_03);
+            this.pbNumero02.Controls.Add(this.pos_04);
+            this.pbNumero02.Controls.Add(this.pos_05);
+            this.pbNumero02.Controls.Add(this.pos_06);
             this.pbNumero02.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbNumero02.Location = new System.Drawing.Point(3, 30);
             this.pbNumero02.Name = "pbNumero02";
             this.pbNumero02.Size = new System.Drawing.Size(912, 598);
             this.pbNumero02.TabIndex = 2;
             // 
-            // pictureBox1
+            // pos_11
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(639, 257);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 108);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pos_11.Location = new System.Drawing.Point(831, 257);
+            this.pos_11.Name = "pos_11";
+            this.pos_11.Size = new System.Drawing.Size(40, 108);
+            this.pos_11.TabIndex = 0;
+            this.pos_11.TabStop = false;
+            this.pos_11.Click += new System.EventHandler(this.pos_11_Click);
             // 
-            // pbNumero01
+            // pos_10
             // 
-            this.pbNumero01.Location = new System.Drawing.Point(591, 257);
-            this.pbNumero01.Name = "pbNumero01";
-            this.pbNumero01.Size = new System.Drawing.Size(40, 108);
-            this.pbNumero01.TabIndex = 0;
-            this.pbNumero01.TabStop = false;
-            this.pbNumero01.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pos_10.Location = new System.Drawing.Point(786, 257);
+            this.pos_10.Name = "pos_10";
+            this.pos_10.Size = new System.Drawing.Size(40, 108);
+            this.pos_10.TabIndex = 0;
+            this.pos_10.TabStop = false;
+            this.pos_10.Click += new System.EventHandler(this.pos_10_Click);
+            // 
+            // pos_09
+            // 
+            this.pos_09.Location = new System.Drawing.Point(739, 257);
+            this.pos_09.Name = "pos_09";
+            this.pos_09.Size = new System.Drawing.Size(40, 108);
+            this.pos_09.TabIndex = 0;
+            this.pos_09.TabStop = false;
+            this.pos_09.Click += new System.EventHandler(this.pos_09_Click);
+            // 
+            // pos_08
+            // 
+            this.pos_08.Location = new System.Drawing.Point(687, 257);
+            this.pos_08.Name = "pos_08";
+            this.pos_08.Size = new System.Drawing.Size(40, 108);
+            this.pos_08.TabIndex = 0;
+            this.pos_08.TabStop = false;
+            this.pos_08.Click += new System.EventHandler(this.pos_08_Click);
+            // 
+            // pos_07
+            // 
+            this.pos_07.Location = new System.Drawing.Point(639, 257);
+            this.pos_07.Name = "pos_07";
+            this.pos_07.Size = new System.Drawing.Size(40, 108);
+            this.pos_07.TabIndex = 0;
+            this.pos_07.TabStop = false;
+            this.pos_07.Click += new System.EventHandler(this.pos_07_Click);
+            // 
+            // pos_02
+            // 
+            this.pos_02.Location = new System.Drawing.Point(391, 257);
+            this.pos_02.Name = "pos_02";
+            this.pos_02.Size = new System.Drawing.Size(40, 108);
+            this.pos_02.TabIndex = 0;
+            this.pos_02.TabStop = false;
+            this.pos_02.Click += new System.EventHandler(this.pos_02_Click);
+            // 
+            // pos_01
+            // 
+            this.pos_01.Location = new System.Drawing.Point(347, 257);
+            this.pos_01.Name = "pos_01";
+            this.pos_01.Size = new System.Drawing.Size(38, 108);
+            this.pos_01.TabIndex = 0;
+            this.pos_01.TabStop = false;
+            this.pos_01.Click += new System.EventHandler(this.pos_01Click);
+            // 
+            // pos_03
+            // 
+            this.pos_03.Location = new System.Drawing.Point(442, 257);
+            this.pos_03.Name = "pos_03";
+            this.pos_03.Size = new System.Drawing.Size(40, 108);
+            this.pos_03.TabIndex = 0;
+            this.pos_03.TabStop = false;
+            this.pos_03.Click += new System.EventHandler(this.pos_03_Click);
+            // 
+            // pos_04
+            // 
+            this.pos_04.Location = new System.Drawing.Point(489, 257);
+            this.pos_04.Name = "pos_04";
+            this.pos_04.Size = new System.Drawing.Size(40, 108);
+            this.pos_04.TabIndex = 0;
+            this.pos_04.TabStop = false;
+            this.pos_04.Click += new System.EventHandler(this.pos_04_Click);
+            // 
+            // pos_05
+            // 
+            this.pos_05.Location = new System.Drawing.Point(541, 257);
+            this.pos_05.Name = "pos_05";
+            this.pos_05.Size = new System.Drawing.Size(40, 108);
+            this.pos_05.TabIndex = 0;
+            this.pos_05.TabStop = false;
+            this.pos_05.Click += new System.EventHandler(this.pos_05_Click);
+            // 
+            // pos_06
+            // 
+            this.pos_06.Location = new System.Drawing.Point(591, 257);
+            this.pos_06.Name = "pos_06";
+            this.pos_06.Size = new System.Drawing.Size(40, 108);
+            this.pos_06.TabIndex = 0;
+            this.pos_06.TabStop = false;
+            this.pos_06.Click += new System.EventHandler(this.pos_06_Click);
             // 
             // Form1
             // 
@@ -232,8 +314,17 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pbNumero02.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_09)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_08)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_07)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pos_06)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,6 +336,7 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clietneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
@@ -253,12 +345,18 @@
         private System.Windows.Forms.ToolStripMenuItem crearTarifaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem búsquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarTarifaToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pbNumero01;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem reservacionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearReservaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifiarReservaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pos_06;
+        private System.Windows.Forms.PictureBox pos_07;
+        private System.Windows.Forms.PictureBox pos_11;
+        private System.Windows.Forms.PictureBox pos_10;
+        private System.Windows.Forms.PictureBox pos_09;
+        private System.Windows.Forms.PictureBox pos_08;
+        private System.Windows.Forms.PictureBox pos_02;
+        private System.Windows.Forms.PictureBox pos_01;
+        private System.Windows.Forms.PictureBox pos_03;
+        private System.Windows.Forms.PictureBox pos_04;
+        private System.Windows.Forms.PictureBox pos_05;
     }
 }
+
 

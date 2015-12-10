@@ -11,3 +11,4 @@ C:\Users\VAIO\Desktop\analisisXP\DAL\bin\Debug\DAL.pdb
 C:\Users\VAIO\Desktop\analisisXP\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\VAIO\Desktop\analisisXP\DAL\obj\Debug\DAL.dll
 C:\Users\VAIO\Desktop\analisisXP\DAL\obj\Debug\DAL.pdb
+C:\Users\Enrique\Source\Repos\analisisXP\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

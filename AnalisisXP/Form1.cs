@@ -15,9 +15,7 @@ namespace AnalisisXP
     {
         private BuscarCliente buscar;
         private BuscarTarifa buscarTarifa;
-        private int picture01Clik = 0;
-        private int picture02Clik = 0;
-
+        private int[] contadores = new int[11];
         public Form1()
         {
             InitializeComponent();
@@ -49,42 +47,80 @@ namespace AnalisisXP
             pbNumero02.Controls.Add(buscarTarifa);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void llenarRegistro(PictureBox posicion, int i)
         {
-            llenarRegistro(picture01Clik);
-        }
-
-        private void pbNumero02_Click(object sender, EventArgs e)
-        {
-            llenarRegistro(picture02Clik);
-        }
-
-
-        private void llenarRegistro(int contador)
-        {
-            if (contador == 0)
+            if (contadores[i] == 0)
             {
-                RegistroEstacionamiento registroEstacionamiento = new RegistroEstacionamiento();
+                RegistroEstacionamiento registroEstacionamiento = new RegistroEstacionamiento("" + i);
                 registroEstacionamiento.ShowDialog();
                 //pbNumero01.ImageLocation = @"\Imagenes\prueba.png";
-                pbNumero01.Image = Resources.prueba;
-                contador++;
+                posicion.Image = Resources.prueba;
+                contadores[i] = 1;
             }
             else
             {
                 DialogResult resultado = MessageBox.Show("¿Desea liberar el espacio?", "Espacio disponible", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (resultado == DialogResult.Yes)
                 {
-                    pbNumero01.Image = null;
-                    contador = 0;
+                    posicion.Image = null;
+                    contadores[i] = 0;
                 }
             }
         }
 
-        private void crearReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pos_01Click(object sender, EventArgs e)
         {
-            Reservacion reserva = new Reservacion();
-            reserva.ShowDialog();
+            llenarRegistro(pos_01, 0);
+        }
+
+        private void pos_02_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_02, 1);
+        }
+
+        private void pos_03_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_03, 2);
+        }
+
+        private void pos_04_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_04, 3);
+        }
+
+        private void pos_05_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_05, 4);
+        }
+
+        private void pos_06_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_06, 5);
+        }
+
+        private void pos_07_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_07, 6);
+        }
+
+        private void pos_08_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_08, 7);
+        }
+
+        private void pos_09_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_09, 8);
+        }
+
+        private void pos_10_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_10, 9);
+        }
+
+        private void pos_11_Click(object sender, EventArgs e)
+        {
+            llenarRegistro(pos_11, 10);
         }
     }
 }
