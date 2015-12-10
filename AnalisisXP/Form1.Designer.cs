@@ -33,7 +33,6 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clietneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearNuevoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reservacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,14 +40,18 @@
             this.tarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarTarifaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifiarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pbNumero02 = new System.Windows.Forms.Panel();
-            this.pbNumero01 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbNumero01 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.pbNumero02.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -73,7 +76,8 @@
             this.inicioToolStripMenuItem,
             this.clietneToolStripMenuItem,
             this.informesToolStripMenuItem,
-            this.tarifaToolStripMenuItem});
+            this.tarifaToolStripMenuItem,
+            this.reservacionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(918, 25);
@@ -90,7 +94,6 @@
             // 
             this.clietneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearNuevoClienteToolStripMenuItem,
-            this.reservacionToolStripMenuItem,
             this.búsquedaToolStripMenuItem});
             this.clietneToolStripMenuItem.Name = "clietneToolStripMenuItem";
             this.clietneToolStripMenuItem.Size = new System.Drawing.Size(59, 21);
@@ -102,12 +105,6 @@
             this.crearNuevoClienteToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.crearNuevoClienteToolStripMenuItem.Text = "Crear nuevo cliente";
             this.crearNuevoClienteToolStripMenuItem.Click += new System.EventHandler(this.crearNuevoClienteToolStripMenuItem_Click);
-            // 
-            // reservacionToolStripMenuItem
-            // 
-            this.reservacionToolStripMenuItem.Name = "reservacionToolStripMenuItem";
-            this.reservacionToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.reservacionToolStripMenuItem.Text = "Reservacion";
             // 
             // búsquedaToolStripMenuItem
             // 
@@ -160,6 +157,35 @@
             this.buscarTarifaToolStripMenuItem.Text = "Buscar tarifa";
             this.buscarTarifaToolStripMenuItem.Click += new System.EventHandler(this.buscarTarifaToolStripMenuItem_Click);
             // 
+            // reservacionToolStripMenuItem
+            // 
+            this.reservacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearReservaToolStripMenuItem,
+            this.modifiarReservaToolStripMenuItem,
+            this.buscarToolStripMenuItem});
+            this.reservacionToolStripMenuItem.Name = "reservacionToolStripMenuItem";
+            this.reservacionToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
+            this.reservacionToolStripMenuItem.Text = "Reservacion";
+            // 
+            // crearReservaToolStripMenuItem
+            // 
+            this.crearReservaToolStripMenuItem.Name = "crearReservaToolStripMenuItem";
+            this.crearReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.crearReservaToolStripMenuItem.Text = "Crear reserva";
+            this.crearReservaToolStripMenuItem.Click += new System.EventHandler(this.crearReservaToolStripMenuItem_Click);
+            // 
+            // modifiarReservaToolStripMenuItem
+            // 
+            this.modifiarReservaToolStripMenuItem.Name = "modifiarReservaToolStripMenuItem";
+            this.modifiarReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.modifiarReservaToolStripMenuItem.Text = "Modifiar reserva";
+            // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.buscarToolStripMenuItem.Text = "Buscar";
+            // 
             // pbNumero02
             // 
             this.pbNumero02.BackColor = System.Drawing.Color.Transparent;
@@ -171,16 +197,6 @@
             this.pbNumero02.Name = "pbNumero02";
             this.pbNumero02.Size = new System.Drawing.Size(912, 598);
             this.pbNumero02.TabIndex = 2;
-            this.pbNumero02.Click += new System.EventHandler(this.pbNumero02_Click);
-            // 
-            // pbNumero01
-            // 
-            this.pbNumero01.Location = new System.Drawing.Point(591, 257);
-            this.pbNumero01.Name = "pbNumero01";
-            this.pbNumero01.Size = new System.Drawing.Size(40, 108);
-            this.pbNumero01.TabIndex = 0;
-            this.pbNumero01.TabStop = false;
-            this.pbNumero01.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox1
             // 
@@ -190,6 +206,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pbNumero01
+            // 
+            this.pbNumero01.Location = new System.Drawing.Point(591, 257);
+            this.pbNumero01.Name = "pbNumero01";
+            this.pbNumero01.Size = new System.Drawing.Size(40, 108);
+            this.pbNumero01.TabIndex = 0;
+            this.pbNumero01.TabStop = false;
+            this.pbNumero01.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -207,8 +232,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pbNumero02.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNumero01)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,7 +245,6 @@
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clietneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearNuevoClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reservacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
@@ -231,6 +255,10 @@
         private System.Windows.Forms.ToolStripMenuItem buscarTarifaToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbNumero01;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem reservacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearReservaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifiarReservaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
     }
 }
 

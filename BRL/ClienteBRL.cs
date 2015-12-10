@@ -81,6 +81,17 @@ namespace BRL
         {
             return DAL.Tarifa.buscarTarifa(inico, fin);
         }
+
+        public static List<DAL.Tarifa> ComBoxTarifa()
+        {
+            return DAL.Referencias.comBoxTarifa();
+        }
         #endregion
+
+        //SE CRE NUEVA FUNCION TAMBIEN EN LA CLASE CLIENTELIST
+        public static List<DAL.Cliente> Clientes() 
+        {
+            return DAL.ClienteList.clientes();
+        }
     }
 }

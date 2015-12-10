@@ -283,5 +283,49 @@ namespace DAL
             return clientCedulabusqueda;
         }
         #endregion
+
+        public static List<Cliente> clientes()
+        {
+            List<Cliente> listaClientes = new List<Cliente>();
+            
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("PDB_listaClientes", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Cliente c = new Cliente();
+
+                            c.IdCliente = reader.GetInt32(0);
+                            c.Nombre = reader.GetString(1);
+
+                            listaClientes.Add(c);
+                        }
+                        reader.NextResult();
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+            return listaClientes;
+        }
     }
 }

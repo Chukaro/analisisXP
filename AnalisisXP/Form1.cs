@@ -80,5 +80,11 @@ namespace AnalisisXP
                 }
             }
         }
+
+        private void crearReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reservacion reserva = new Reservacion();
+            reserva.ShowDialog();
+        }
     }
 }

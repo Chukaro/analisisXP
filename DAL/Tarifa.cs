@@ -12,27 +12,41 @@ namespace DAL
     public class Tarifa
     {
         private int idTarifa;
+        private int cantidadHora;
+        private decimal precio;
+        private int tipoAuto;
+        private string tipoReserva;
+        private DateTime fecha;
+
+        public int CantidadHora
+        {
+            get { return cantidadHora; }
+            set { cantidadHora = value; }
+        }
+
+        public int TipoAuto
+        {
+            get { return tipoAuto; }
+            set { tipoAuto = value; }
+        }
 
         public int IdTarifa
         {
             get { return idTarifa; }
             set { idTarifa = value; }
         }
-        private decimal precio;
-
+        
         public decimal Precio
         {
             get { return precio; }
             set { precio = value; }
         }
-        private string tipoReserva;
 
         public string TipoReserva
         {
             get { return tipoReserva; }
             set { tipoReserva = value; }
         }
-        private DateTime fecha;
 
         public DateTime Fecha
         {
@@ -60,9 +74,11 @@ namespace DAL
 
                         command.Transaction = trato;
 
+                        command.Parameters.AddWithValue("cantHora", item.CantidadHora);
                         command.Parameters.AddWithValue("precio", item.Precio);
-                        command.Parameters.AddWithValue("tipo", item.TipoReserva);
+                        command.Parameters.AddWithValue("tipo", item.TipoAuto);
                         command.Parameters.AddWithValue("fecha", item.Fecha);
+                        command.Parameters.AddWithValue("tipoReserva", item.TipoReserva);
 
                         command.Transaction = trato;
                         fila = command.ExecuteNonQuery();

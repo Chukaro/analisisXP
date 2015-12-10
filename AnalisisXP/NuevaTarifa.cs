@@ -15,36 +15,71 @@ namespace AnalisisXP
         public NuevaTarifa()
         {
             InitializeComponent();
+            LLenaCmbBoxTipoAuto();
+            FilasDvgReserva();
+            FilasDvgReservaLibre();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            bool guardarLibre = true;
+            bool guardarReserva = true;
             List<DAL.Tarifa> tarifas = new List<DAL.Tarifa>();
 
             DateTime fechaHoy = DateTime.Now;
 
-            if (dgvTarifa.Rows.Count > 0)
+            foreach (DataGridViewRow item in dgvLibre.Rows)
             {
-                foreach (DataGridViewRow item in dgvTarifa.Rows)
+                if (item.Cells[1].Value != null || Convert.ToInt32(item.Cells[1].Value) != 0)
                 {
-                    if (item.Cells[0].Value != null)
-                    {
-                        DAL.Tarifa t = new DAL.Tarifa();
+                    DAL.Tarifa t = new DAL.Tarifa();
 
-                        t.Precio = Convert.ToDecimal(item.Cells[0].Value.ToString());
-                        t.TipoReserva = item.Cells[1].Value.ToString();
-                        t.Fecha = fechaHoy;
-                        tarifas.Add(t);
-                    }
+                    t.CantidadHora = Convert.ToInt32(item.Cells[0].Value);
+                    t.Precio = Convert.ToDecimal(item.Cells[1].Value);
+                    t.TipoAuto = Convert.ToInt32(item.Cells[2].Value);
+                    t.TipoReserva = item.Cells[3].Value.ToString();
+
+                    t.Fecha = fechaHoy;
+                    tarifas.Add(t);
                 }
-
-                BRL.ClienteBRL.NuevaTarifa(tarifas);
-                dgvTarifa.Rows.Clear();
-
+                else
+                {
+                    guardarLibre = false;
+                    break;
+                }
             }
-            else
+
+
+            foreach (DataGridViewRow item in dgvReserva.Rows)
             {
-                MessageBox.Show("Campos vacios", "ERROR");
+                if (item.Cells[1].Value != null || Convert.ToInt32(item.Cells[1].Value) != 0)
+                {
+                    DAL.Tarifa t = new DAL.Tarifa();
+
+                    t.CantidadHora = Convert.ToInt32(item.Cells[0].Value);
+                    t.Precio = Convert.ToDecimal(item.Cells[1].Value);
+                    t.TipoAuto = Convert.ToInt32(item.Cells[2].Value);
+                    t.TipoReserva = item.Cells[3].Value.ToString();
+
+                    t.Fecha = fechaHoy;
+                    tarifas.Add(t);
+                }
+                else
+                {
+                    guardarReserva = false;
+                    break;
+                }
+            }
+
+            if (guardarLibre && guardarReserva)
+            {
+                BRL.ClienteBRL.NuevaTarifa(tarifas);
+                this.Close();
+            }
+            else 
+            {
+                MessageBox.Show("Campo Precio Requerido verificar datos", "ERROR");
+                          
             }
         }
 
@@ -53,16 +88,55 @@ namespace AnalisisXP
             this.Close();
         }
 
-        private void dgvTarifa_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        private void FilasDvgReserva()
         {
-            if (dgvTarifa.CurrentCell.ColumnIndex == 0)
+            dgvReserva.Rows.Add(1, null, 1, "Reserva");
+            dgvReserva.Rows.Add(1, null, 2, "Reserva");
+        }
+
+        private void LLenaCmbBoxTipoAuto()
+        {
+            DataGridViewComboBoxColumn comboboxTipo = dgvReserva.Columns["Tipo"] as DataGridViewComboBoxColumn;
+            comboboxTipo.DataSource = BRL.ClienteBRL.ComBoxTipoVehiculo();
+            comboboxTipo.DisplayMember = "Nombre";
+            comboboxTipo.ValueMember = "IdTipoVehiculo";
+
+            DataGridViewComboBoxColumn comboboxTipoLibre = dgvLibre.Columns["TipoL"] as DataGridViewComboBoxColumn;
+            comboboxTipoLibre.DataSource = BRL.ClienteBRL.ComBoxTipoVehiculo();
+            comboboxTipoLibre.DisplayMember = "Nombre";
+            comboboxTipoLibre.ValueMember = "IdTipoVehiculo";
+        }
+
+        private void FilasDvgReservaLibre()
+        {
+            dgvLibre.Rows.Add(1, null, 1, "Libre");
+            dgvLibre.Rows.Add(1, null, 2, "Libre");
+        }
+
+        private void dgvLibre_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dgvLibre.CurrentCell.ColumnIndex == 1)
             {
                 DataGridViewTextBoxEditingControl txtPrecio = (DataGridViewTextBoxEditingControl)e.Control;
-                txtPrecio.KeyPress += new KeyPressEventHandler(txtPrecio_KeyPress);
+                txtPrecio.KeyPress += new KeyPressEventHandler(txtPrecioLibre_KeyPress);
             }
         }
 
-        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPrecioLibre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            DAL.Vaidacion.NumerosDecimales(e, sender);
+        }
+
+        private void dgvReserva_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dgvReserva.CurrentCell.ColumnIndex == 1)
+            {
+                DataGridViewTextBoxEditingControl txtPrecio = (DataGridViewTextBoxEditingControl)e.Control;
+                txtPrecio.KeyPress += new KeyPressEventHandler(txtPrecioReserva_KeyPress);
+            }
+        }
+
+        private void txtPrecioReserva_KeyPress(object sender, KeyPressEventArgs e)
         {
             DAL.Vaidacion.NumerosDecimales(e, sender);
         }

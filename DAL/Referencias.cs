@@ -98,5 +98,130 @@ namespace DAL
             }
             return lista;
         }
+
+        //nuevo Funcion
+        public static List<Tarifa> comBoxTarifa()
+        {
+            List<Tarifa> lista = new List<Tarifa>();
+
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("PDB_horasReserva", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Tarifa t = new Tarifa();
+
+                            t.CantidadHora = reader.GetInt16(0);
+                            t.Precio = reader.GetDecimal(1);
+                            
+                            lista.Add(t);
+                        }
+                        reader.NextResult();
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+            return lista;
+        }
+
+        public static Tarifa tarifaActualReserva()
+        {
+            Tarifa precio = new Tarifa();
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("PDB_TarifaActual", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            precio.IdTarifa = reader.GetInt32(0);
+                            precio.Precio = reader.GetDecimal(1);
+                        }
+                        reader.NextResult();
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return precio;
+        }
+
+
+        public static List<Espacio> espacioDisponible()
+        {
+            List<Espacio> espacios = new List<Espacio>();
+            string connectionString = ConfigurationManager.ConnectionStrings["ParkeoConnString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("PDB_Posicion", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Espacio libre = new Espacio();
+                            libre.IdEspacio = reader.GetInt32(0);
+
+                            espacios.Add(libre);
+                        }
+                        reader.NextResult();
+                    }
+                    reader.Close();
+                }
+                catch (SqlException ex)
+                {
+                    throw ex;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+            return espacios;
+        }
     }
 }

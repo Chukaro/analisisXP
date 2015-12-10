@@ -43,9 +43,13 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteList.cs" />
+    <Compile Include="DetalleReserva.cs" />
+    <Compile Include="Espacio.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referencias.cs" />
+    <Compile Include="Reserva.cs" />
+    <Compile Include="ReservaList.cs" />
     <Compile Include="Tarifa.cs" />
     <Compile Include="TipoVehiculo.cs" />
     <Compile Include="Vaidacion.cs" />

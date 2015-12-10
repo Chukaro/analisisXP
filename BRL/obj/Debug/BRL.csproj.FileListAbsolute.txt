@@ -12,3 +12,10 @@ E:\GitHub\analisisXP\BRL\bin\Debug\DAL.pdb
 E:\GitHub\analisisXP\BRL\obj\Debug\BRL.csprojResolveAssemblyReference.cache
 E:\GitHub\analisisXP\BRL\obj\Debug\BRL.dll
 E:\GitHub\analisisXP\BRL\obj\Debug\BRL.pdb
+C:\Users\VAIO\Desktop\analisisXP\BRL\bin\Debug\BRL.dll
+C:\Users\VAIO\Desktop\analisisXP\BRL\bin\Debug\BRL.pdb
+C:\Users\VAIO\Desktop\analisisXP\BRL\bin\Debug\DAL.dll
+C:\Users\VAIO\Desktop\analisisXP\BRL\bin\Debug\DAL.pdb
+C:\Users\VAIO\Desktop\analisisXP\BRL\obj\Debug\BRL.csprojResolveAssemblyReference.cache
+C:\Users\VAIO\Desktop\analisisXP\BRL\obj\Debug\BRL.dll
+C:\Users\VAIO\Desktop\analisisXP\BRL\obj\Debug\BRL.pdb
